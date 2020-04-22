@@ -1,0 +1,578 @@
+<Tab>:
+	# COMMON CONTENT GOES HERE !!
+
+Screen:
+	ScreenManager:
+		id : screen_manager
+		Screen:
+			name: 'home screen'
+			BoxLayout:
+				orientation: 'vertical'
+				MDToolbar:
+					title: 'WhatsApp'
+					pos_hint: {'top': True}
+					#left_action_items : [['menu', lambda x: print(x)]]
+					right_action_items : [['magnify', lambda x: print(x)], ['dots-vertical', lambda x : print(x)]]
+				MDTabs:	
+					Tab:			
+						# INDIVIDUAL TABS CONTENT GOES HERE !!
+						text: 'CHATS'
+						ScrollView:
+							MDList:
+								TwoLineAvatarListItem:
+									text: 'sentdex'
+									secondary_text: 'Some random msg !!.'
+									on_press:
+										app.change_screen('chat screen', title = self.text)
+									ImageLeftWidget:
+										source: "data/logo/kivy-icon-256.png"
+								TwoLineAvatarListItem:
+									text: 'Andrew'
+									secondary_text: 'LOL !'
+									on_press:
+										app.change_screen('chat screen', title = self.text)
+									ImageLeftWidget:
+										source: "data/logo/kivy-icon-256.png"
+								TwoLineAvatarListItem:
+									text: 'starmer'
+									secondary_text: 'Some random msg !!'
+									on_press:
+										app.change_screen('chat screen', title = self.text)
+									ImageLeftWidget:
+										source: "data/logo/kivy-icon-256.png"
+								TwoLineAvatarListItem:
+									text: 'alfredo'
+									secondary_text: 'Some random msg !!'
+									on_press:
+										app.change_screen('chat screen', title = self.text)
+									ImageLeftWidget:
+										source: "data/logo/kivy-icon-256.png"
+								TwoLineAvatarIconListItem:
+									text: 'Chartbusters'
+									secondary_text: 'Some random msg !!'
+									on_press:
+										app.change_screen('chat screen', title = self.text)
+									IconLeftWidget:
+										icon: "account-group-outline"
+								TwoLineAvatarListItem:
+									text: 'Ng'
+									secondary_text: 'Some random msg !!'
+									on_press:
+										app.change_screen('chat screen', title = self.text)
+									ImageLeftWidget:
+										source: "data/logo/kivy-icon-256.png"
+								TwoLineAvatarListItem:
+									text: 'krish'
+									secondary_text: 'Some random msg !!'
+									on_press:
+										app.change_screen('chat screen', title = self.text)
+									ImageLeftWidget:
+										source: "data/logo/kivy-icon-256.png"
+								TwoLineAvatarIconListItem:
+									text: 'Swaggers'
+									secondary_text: 'Some random msg !!'
+									on_press:
+										app.change_screen('chat screen', title = self.text)
+									IconLeftWidget:
+										icon : "account-group-outline"
+								TwoLineAvatarListItem:
+									text: 'joshua'
+									secondary_text: 'Some random msg !!'
+									on_press:
+										app.change_screen('chat screen', title = self.text)
+									ImageLeftWidget:
+										source: "data/logo/kivy-icon-256.png"
+								TwoLineAvatarListItem:
+									text: 'naik'
+									secondary_text: 'Some random msg !!'
+									on_press:
+										app.change_screen('chat screen', title = self.text)
+									ImageLeftWidget:
+										source: "data/logo/kivy-icon-256.png"
+								TwoLineAvatarListItem:
+									text: 'thakur'
+									secondary_text: 'Some random msg !!'
+									on_press:
+										app.change_screen('chat screen', title = self.text)
+									ImageLeftWidget:
+										source: "data/logo/kivy-icon-256.png"
+								TwoLineAvatarListItem:
+									text: '3blue1brown'
+									secondary_text: 'Some random msg !!'
+									on_press:
+										app.change_screen('chat screen', title = self.text)
+									ImageLeftWidget:
+										source: "data/logo/kivy-icon-256.png"
+								TwoLineAvatarListItem:
+									text: 'Abhishek'
+									secondary_text: 'Some random msg !!'
+									on_press:
+										app.change_screen('chat screen', title = self.text)
+									ImageLeftWidget:
+										source: "data/logo/kivy-icon-256.png"
+								TwoLineAvatarListItem:
+									text: 'Nick'
+									secondary_text: 'Some random msg !!'
+									on_press:
+										app.change_screen('chat screen', title = self.text)
+									ImageLeftWidget:
+										source: "data/logo/kivy-icon-256.png"
+								TwoLineAvatarListItem:
+									text: 'white'
+									secondary_text: 'Some random msg !!'
+									on_press:
+										app.change_screen('chat screen', title = self.text)
+									ImageLeftWidget:
+										source: "data/logo/kivy-icon-256.png"
+								TwoLineAvatarListItem:
+									text: 'Errichto'
+									secondary_text: 'Some random msg !!'
+									on_press:
+										app.change_screen('chat screen', title = self.text)
+									ImageLeftWidget:
+										source: "data/logo/kivy-icon-256.png"
+								TwoLineAvatarListItem:
+									text: 'Aryan'
+									secondary_text: 'Some random msg !!'
+									on_press:
+										app.change_screen('chat screen', title = self.text)
+									ImageLeftWidget:
+										source: "data/logo/kivy-icon-256.png"
+						FloatLayout:
+							MDFloatingActionButton:
+								md_bg_color : (0.145, 0.827, 0.4, 1)
+								text_color : (1, 1, 1, 1)
+								icon : 'message-reply-text'
+								size : 45, 45
+								pos : root.width - 1.5*self.width,  root.y + self.height//2
+								on_press:
+									app.change_screen('select contact')
+					Tab:
+						# INDIVIDUAL TABS CONTENT GOES HERE !!
+						text: 'STATUS'
+						ScrollView:
+							MDList:
+								TwoLineAvatarListItem:
+									text : 'My Status'
+									secondary_text : 'Tap to add status update'
+									ImageLeftWidget:
+										source: '../../KivyMD/kivymd/images/kivymd_512.png'
+								OneLineListItem:
+									text : 'Recent updates'
+								TwoLineAvatarListItem:
+									text : 'drik'
+									secondary_text : 'Today, 10:31 pm'
+									ImageLeftWidget:
+										source: '../../KivyMD/kivymd/images/kivymd_512.png'
+								TwoLineAvatarListItem:
+									text : 'Andrew'
+									secondary_text : 'Today, 10:31 pm'
+									ImageLeftWidget:
+										source: '../../KivyMD/kivymd/images/kivymd_512.png'
+								TwoLineAvatarListItem:
+									text : 'stephen'
+									secondary_text : 'Today, 10:31 pm'
+									ImageLeftWidget:
+										source: '../../KivyMD/kivymd/images/kivymd_512.png'
+								TwoLineAvatarListItem:
+									text : 'alfredo'
+									secondary_text : 'Today, 10:31 pm'
+									ImageLeftWidget:
+										source: '../../KivyMD/kivymd/images/kivymd_512.png'
+								TwoLineAvatarListItem:
+									text : 'Sentdex'
+									secondary_text : 'Today, 10:31 pm'
+									ImageLeftWidget:
+										source: '../../KivyMD/kivymd/images/kivymd_512.png'
+								OneLineListItem:
+									text : 'Viewed updates'
+								TwoLineAvatarListItem:
+									text : 'Sandberg'
+									secondary_text : 'Today, 10:31 pm'
+									ImageLeftWidget:
+										source: '../../KivyMD/kivymd/images/kivymd_512.png'
+								TwoLineAvatarListItem:
+									text : 'Thakur'
+									secondary_text : 'Today, 10:31 pm'
+									ImageLeftWidget:
+										source: '../../KivyMD/kivymd/images/kivymd_512.png'
+								TwoLineAvatarListItem:
+									text : 'krish'
+									secondary_text : 'Today, 10:31 pm'
+									ImageLeftWidget:
+										source: '../../KivyMD/kivymd/images/kivymd_512.png'
+								TwoLineAvatarListItem:
+									text : 'Erik'
+									secondary_text : 'Today, 10:31 pm'
+									ImageLeftWidget:
+										source: '../../KivyMD/kivymd/images/kivymd_512.png'
+								TwoLineAvatarListItem:
+									text : 'dynamo'
+									secondary_text : 'Today, 10:31 pm'
+									ImageLeftWidget:
+										source: '../../KivyMD/kivymd/images/kivymd_512.png'
+								TwoLineAvatarListItem:
+									text : 'hedley'
+									secondary_text : 'Today, 10:31 pm'
+									ImageLeftWidget:
+										source: '../../KivyMD/kivymd/images/kivymd_512.png'
+
+						FloatLayout:
+							MDFloatingActionButton:
+								md_bg_color : (0.145, 0.827, 0.4, 1)
+								text_color : (1, 1, 1, 1)
+								icon : 'camera'
+								size : 50, 50
+								pos : root.width - 1.5*self.width, root.y + self.height//2
+								on_press:
+									print('click picture')
+							MDFloatingActionButton:
+								md_bg_color : (0.925, 0.898, 0.866, 1)
+								text_color : app.theme_cls.primary_dark
+								icon : 'pen'
+								size: 43.5, 43.5
+								pos : root.width - 1.65*self.width, root.y + 4.35*self.height//2
+								on_press:
+									#print('update status')
+									app.change_screen('update status')			
+					Tab:
+						# INDIVIDUAL TABS CONTENT GOES HERE !!
+						text: 'CALLS'
+						ScrollView:
+							MDList:
+								TwoLineAvatarIconListItem:
+									text : 'kevin'
+									secondary_text : '30 March,8:53 PM'
+									IconLeftWidget:
+										icon : 'emoticon-cool-outline'
+									IconRightWidget:
+										icon : 'phone'
+										theme_text_color : 'Custom'
+										text_color : (18/255, 140/255, 126/255, 1)
+								TwoLineAvatarIconListItem:
+									text : 'Jeff'
+									secondary_text : '30 March,8:53 PM'
+									IconLeftWidget:
+										icon : 'emoticon-excited-outline'
+									IconRightWidget:
+										icon : 'phone'
+										theme_text_color : 'Custom'
+										text_color : (18/255, 140/255, 126/255, 1)
+								TwoLineAvatarIconListItem:
+									text : 'Markham'
+									secondary_text : '30 March,8:53 PM'
+									IconLeftWidget:
+										icon : 'emoticon-cool-outline'
+									IconRightWidget:
+										icon : 'phone'
+										theme_text_color : 'Custom'
+										text_color : (18/255, 140/255, 126/255, 1)
+								TwoLineAvatarIconListItem:
+									text : 'heaton'
+									secondary_text : '30 March,8:53 PM'
+									IconLeftWidget:
+										icon : 'emoticon-excited-outline'
+									IconRightWidget:
+										icon : 'phone'
+										theme_text_color : 'Custom'
+										text_color : (18/255, 140/255, 126/255, 1)
+								TwoLineAvatarIconListItem:
+									text : 'Corey'
+									secondary_text : '30 March,8:53 PM'
+									IconLeftWidget:
+										icon : 'emoticon-neutral-outline'
+									IconRightWidget:
+										icon : 'phone'
+										theme_text_color : 'Custom'
+										text_color : (18/255, 140/255, 126/255, 1)
+								TwoLineAvatarIconListItem:
+									text : 'Daniel'
+									secondary_text : '30 March,8:53 PM'
+									IconLeftWidget:
+										icon : 'emoticon-happy-outline'
+									IconRightWidget:
+										icon : 'phone'
+										theme_text_color : 'Custom'
+										text_color : (18/255, 140/255, 126/255, 1)
+								TwoLineAvatarIconListItem:
+									text : 'Dojo'
+									secondary_text : '30 March,8:53 PM'
+									IconLeftWidget:
+										icon : 'emoticon-neutral-outline'
+									IconRightWidget:
+										icon : 'phone'
+										theme_text_color : 'Custom'
+										text_color : (18/255, 140/255, 126/255, 1)
+								TwoLineAvatarIconListItem:
+									text : 'Bourke'
+									secondary_text : '30 March,8:53 PM'
+									IconLeftWidget:
+										icon : 'emoticon-happy-outline'
+									IconRightWidget:
+										icon : 'phone'
+										theme_text_color : 'Custom'
+										text_color : (18/255, 140/255, 126/255, 1)
+								TwoLineAvatarIconListItem:
+									text : 'Jackson'
+									secondary_text : '30 March,8:53 PM'
+									IconLeftWidget:
+										icon : 'emoticon-neutral-outline'
+									IconRightWidget:
+										icon : 'phone'
+										theme_text_color : 'Custom'
+										text_color : (18/255, 140/255, 126/255, 1)
+								TwoLineAvatarIconListItem:
+									text : ''
+						FloatLayout:
+							MDFloatingActionButton:
+								md_bg_color : (0.145, 0.827, 0.4, 1)
+								text_color : (1, 1, 1, 1)
+								icon : 'call-made'
+								size : 45, 45
+								pos : root.width - 1.5*self.width, root.y + self.height//2
+								on_press:
+									app.change_screen('select contact2')
+
+		Screen:
+			name : 'update status'
+			FloatLayout:
+				canvas:
+					Color:
+						rgb: (0.4, 0.2, 0.5)
+					Rectangle:
+						size : self.size
+						pos : self.pos
+				MDIconButton:
+					icon : 'keyboard-backspace'
+					md_bg_color : (0.4, 0.2, 0.5, 1)
+					theme_text_color : 'Custom'
+					text_color : (1, 1, 1, 1)
+					size_hint: (None, None)
+					pos_hint : {'top' : True}
+					on_press:
+						app.change_screen('home screen', 'back')
+				MDLabel:
+					text : 'Type a status'
+					halign: 'center'
+					theme_text_color : 'Custom'
+					text_color : (1, 1, 1, 1)
+					font_size: '25sp'
+				MDList:
+					OneLineIconListItem:
+						md_bg_color : (0.5, 0.5, 0.8, 1)
+						text : 'Status (Custom)'
+						theme_text_color : 'Custom'
+						text_color : (1, 1, 1, 1)
+						pos_hint: {'bottom': True}
+						IconLeftWidget:	
+							icon : 'chevron-right'
+							theme_text_color : 'Custom'
+							text_color : (1, 1, 1, 1)
+				MDIconButton:
+					icon : 'emoticon-excited'
+					md_bg_color : (0.4, 0.2, 0.5, 1)
+					theme_text_color : 'Custom'
+					text_color : (1, 1, 1, 1)
+					#size_hint: (None, None)
+					pos : root.x + self.width, root.y + 0.8*self.height
+				MDIconButton:
+					icon : 'format-text'
+					md_bg_color : (0.4, 0.2, 0.5, 1)
+					theme_text_color : 'Custom'
+					text_color : (1, 1, 1, 1)
+					#size_hint: (None, None)
+					pos : root.x + 2*self.width, root.y + 0.8*self.height
+				MDIconButton:
+					icon : 'palette'
+					md_bg_color : (0.4, 0.2, 0.5, 1)
+					theme_text_color : 'Custom'
+					text_color : (1, 1, 1, 1)
+					#size_hint: (None, None)
+					pos : root.x + 3*self.width, root.y + 0.8*self.height
+
+		Screen:
+			name : 'select contact2'	
+			BoxLayout:
+				orientation : 'vertical'
+				MDToolbar:
+					id : toolbar2
+					pos_hint : {'top' : True}
+					title : 'Select contact'
+					left_action_items : [['keyboard-backspace', lambda x : app.change_screen('home screen', 'back')]]
+					right_action_items : [['magnify', lambda x : print('search')], ['dots-vertical', lambda x : print('vertical-dots')]]
+				ScrollView:
+					MDList:
+						OneLineAvatarIconListItem:
+							text : 'New group call' # account-multiple
+							IconLeftWidget:
+								icon : 'account-multiple'
+						OneLineAvatarIconListItem:
+							text : 'New contact' # account-plus
+							IconLeftWidget:
+								icon : 'account-plus'
+
+		Screen:
+			name : 'select contact'
+			BoxLayout:
+				orientation: 'vertical'
+				MDToolbar:
+					id : toolbar
+					pos_hint: {'top': True}
+					title: 'Select contact'
+					right_action_items : [['magnify', lambda x : print('search')], ['dots-vertical', lambda x : print(x)]]
+					left_action_items : [['keyboard-backspace', lambda x : app.change_screen('home screen', 'back')]]
+				ScrollView:
+					MDList:
+						OneLineAvatarIconListItem:
+							text : 'New group'
+							IconLeftWidget:
+								icon : 'account-multiple'
+								md_bg_color : (0.145, 0.827, 0.4, 1)
+								size_hint: (1, 1)
+						OneLineAvatarIconListItem:
+							text : 'New contact'
+							IconLeftWidget:
+								icon : 'account-plus'
+								md_bg_color : (0.145, 0.827, 0.4, 1)
+								size_hint: (1, 1)								
+						TwoLineAvatarIconListItem:
+							text : 'Andrew'
+							secondary_text : 'Hey there! I am using WhatsApp.'
+							on_press:
+								app.change_screen('chat screen', title = self.text)
+							IconLeftWidget:
+								icon : 'face-woman'						
+						TwoLineAvatarIconListItem:
+							text : 'Gabbard'
+							secondary_text : 'Hey there! I am using WhatsApp.'
+							on_press:
+								app.change_screen('chat screen', title = self.text)
+							IconLeftWidget:
+								icon : 'face-woman-outline'						
+						TwoLineAvatarIconListItem:
+							text : 'Kevin'
+							secondary_text : 'Hey there! I am using WhatsApp.'	
+							on_press:
+								app.change_screen('chat screen', title = self.text)
+							IconLeftWidget:
+								icon : 'face-woman'					
+						TwoLineAvatarIconListItem:
+							text : 'Dojo'
+							secondary_text : 'Hey there! I am using WhatsApp.'
+							on_press:
+								app.change_screen('chat screen', title = self.text)
+							IconLeftWidget:
+								icon : 'face-woman-outline'						
+						TwoLineAvatarIconListItem:
+							text : 'Markham'
+							secondary_text : 'Hey there! I am using WhatsApp.'
+							on_press:
+								app.change_screen('chat screen', title = self.text)
+							IconLeftWidget:
+								icon : 'face-woman'						
+						TwoLineAvatarIconListItem:
+							text : 'Daniel'
+							secondary_text : 'Hey there! I am using WhatsApp.'	
+							on_press:
+								app.change_screen('chat screen', title = self.text)
+							IconLeftWidget:
+								icon : 'face-woman-outline'					
+						TwoLineAvatarIconListItem:
+							text : 'Krish'
+							secondary_text : 'Hey there! I am using WhatsApp.'
+							on_press:
+								app.change_screen('chat screen', title = self.text)
+							IconLeftWidget:
+								icon : 'face-woman-outline'						
+						TwoLineAvatarIconListItem:
+							text : 'Erik'
+							secondary_text : 'Hey there! I am using WhatsApp.'
+							on_press:
+								app.change_screen('chat screen', title = self.text)
+							IconLeftWidget:
+								icon : 'face-woman'						
+						TwoLineAvatarIconListItem:
+							text : 'Julian'
+							secondary_text : 'Hey there! I am using WhatsApp.'	
+							on_press:
+								app.change_screen('chat screen', title = self.text)
+							IconLeftWidget:
+								icon : 'face-woman'					
+						TwoLineAvatarIconListItem:
+							text : 'Jeff'
+							secondary_text : 'Hey there! I am using WhatsApp.'
+							on_press:
+								app.change_screen('chat screen', title = self.text)
+							IconLeftWidget:
+								icon : 'face-woman-outline'
+		Screen:
+			name : 'chat screen'	
+			BoxLayout:
+				orientation: 'vertical'
+				MDToolbar:
+					id : toolbar_chat_screen
+					pos_hint: {'top': True}
+					right_action_items : [['video', lambda x : print('video call')], ['phone', lambda x : print('calling..')], ['dots-vertical', lambda x : print('OPTIONS NOT ACCESSIBLE...')]]
+					left_action_items : [['keyboard-backspace', lambda x : app.change_screen('home screen', curr = 'back')]]
+				ScrollView:
+					MDList:
+						OneLineListItem:
+							text : 'Chat content (scrollable)'
+						OneLineListItem:
+							text : 'Chat content (scrollable)'
+						OneLineListItem:
+							text : 'Chat content (scrollable)'
+						OneLineListItem:
+							text : 'Chat content (scrollable)'
+						OneLineListItem:
+							text : 'Chat content (scrollable)'
+						OneLineListItem:
+							text : 'Chat content (scrollable)'
+						OneLineListItem:
+							text : 'Chat content (scrollable)'
+						OneLineListItem:
+							text : 'Chat content (scrollable)'
+						OneLineListItem:
+							text : 'Chat content (scrollable)'
+						OneLineListItem:
+							text : 'Chat content (scrollable)'
+						OneLineListItem:
+							text : 'Chat content (scrollable)'
+						OneLineListItem:
+							text : 'Chat content (scrollable)'
+						OneLineListItem:
+							text : 'Chat content (scrollable)'
+						OneLineListItem:
+							text : 'Chat content (scrollable)'
+						OneLineListItem:
+							text : 'Chat content (scrollable)'
+						OneLineListItem:
+							text : 'Chat content (scrollable)'
+						OneLineListItem:
+							text : 'Chat content (scrollable)'
+						OneLineListItem:
+							text : 'Chat content (scrollable)'
+						OneLineListItem:
+							text : 'Chat content (scrollable)'
+						OneLineListItem:
+							text : 'Chat content (scrollable)'
+						OneLineListItem:
+							text : 'Chat content (scrollable)'
+						OneLineListItem:
+							text : 'Chat content (scrollable)'
+			FloatLayout:
+				MDTextFieldRound:
+					hint_text : 'Type a message'
+					icon_left : 'emoticon-outline'
+					normal_color : 1, 1, 1, 1
+					color_active : 1, 1, 1, 1
+					icon_right : 'paperclip'
+					size_hint: (0.59, 0.08)
+					pos : root.x + self.height/1.5, root.y + self.height//5
+				MDFloatingActionButton:
+					md_bg_color : (0.145, 0.827, 0.4, 1)
+					text_color : (1, 1, 1, 1)
+					icon : 'microphone'
+					size : 45, 45
+					pos : root.width - 1.25*self.width, 0.2*self.width
+					size : 47, 47
